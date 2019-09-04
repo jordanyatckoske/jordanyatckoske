@@ -1,0 +1,13 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  .menu {
+    width: 7vw;
+    background: gray;
+  }
+  .main {
+    width: 90vh;
+    background: white;
+    margin: auto;
+  }
+}
