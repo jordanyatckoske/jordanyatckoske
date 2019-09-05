@@ -26,7 +26,8 @@ const Layout = ({ children }) => {
   return (
     <>
       <div className={styles.container}>
-        <aside className={styles.menu}>aside</aside>
+        {/* <aside className={styles.menu}>aside</aside> */}
+        <Header siteTitle="Jordan Yatckoske" />
         <main className={styles.main}>{children}</main>
       </div>
       {/* <Header siteTitle={data.site.siteMetadata.title} />
