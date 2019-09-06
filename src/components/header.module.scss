@@ -1,0 +1,16 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+  h3 {
+    a {
+      color: $darkBlue;
+      transition: color 0.5s ease-in-out;
+
+      &:hover {
+        color: $teal;
+      }
+    }
+  }
+}
