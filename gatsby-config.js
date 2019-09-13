@@ -39,7 +39,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-sass-resources`,
       options: {
-        resources: ["src/styles/colors.scss"],
+        resources: ["src/styles/colors.scss", "src/styles/global.scss"],
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
