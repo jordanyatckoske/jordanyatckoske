@@ -67,21 +67,28 @@
 
   .main {
     display: flex;
+    flex-wrap: wrap;
     width: 90vw;
     margin: auto;
     justify-content: space-around;
     align-items: center;
-    flex-wrap: wrap;
+
+    @include media(">=desktop") {
+      flex-wrap: nowrap;
+    }
   }
 
   footer {
-    padding: 2em;
+    padding: 0;
     display: flex;
     justify-content: center;
     @include text-shadow;
     h5 {
       animation: slide-up 10s 0.5s backwards;
       color: $darkBlue;
+    }
+    @include media(">phone") {
+      padding: 2em;
     }
   }
 }

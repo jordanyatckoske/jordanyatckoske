@@ -1,7 +1,11 @@
 .header {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-around;
+
+  @include media(">=tablet") {
+    flex-direction: row;
+  }
 
   h3 {
     animation: slide-up 10s 0.5s backwards;

@@ -9,10 +9,18 @@ svg {
 }
 .graphic {
   flex: 100%;
+
+  @include media(">tablet") {
+    flex: 70%;
+  }
 }
 
 .content {
   padding: 0 0 0 2em;
   flex: 100%;
   animation: slide-from-left 10s ease-in-out forwards;
+
+  @include media(">tablet") {
+    flex: 30%;
+  }
 }
