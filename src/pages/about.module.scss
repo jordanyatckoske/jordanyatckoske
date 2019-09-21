@@ -1,0 +1,18 @@
+.title {
+  flex: 30%;
+  text-align: center;
+
+  @include media(">=desktop") {
+    text-align: right;
+  }
+}
+.content {
+  flex: 70%;
+  text-align: left;
+  padding: 0 0 0 2em;
+  color: $magenta;
+
+  @include media(">=desktop") {
+    max-width: 800px;
+  }
+}
