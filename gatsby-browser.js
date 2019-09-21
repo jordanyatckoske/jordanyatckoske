@@ -7,7 +7,6 @@
 // You can delete this file if you're not using it
 import "./src/styles/global.scss"
 import "./src/styles/colors.scss"
-import "./src/styles/index.module.scss"
 import "./src/styles/include-media.scss"
 
 import "./src/components/layout.module.scss"
