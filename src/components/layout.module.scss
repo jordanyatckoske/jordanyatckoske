@@ -84,7 +84,7 @@
     justify-content: center;
     @include text-shadow;
     h5 {
-      animation: slide-up 10s 0.5s backwards;
+      animation: slide-down 10s 0.5s backwards;
       color: $darkBlue;
     }
     @include media(">phone") {

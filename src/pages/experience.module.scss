@@ -33,10 +33,10 @@ svg {
   }
   h3 {
     color: $teal;
-    animation: slide-up 10s 0.5s backwards;
+    animation: slide-down 10s 0.5s backwards;
   }
   p {
-    animation: slide-up 10s 1s backwards;
+    animation: slide-down 10s 1s backwards;
     color: $teal;
     opacity: 70%;
     margin: 1em;

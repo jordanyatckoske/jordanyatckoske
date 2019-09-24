@@ -8,7 +8,7 @@
   }
 
   h3 {
-    animation: slide-up 10s 0.5s backwards;
+    animation: slide-down 10s 0.5s backwards;
     a {
       color: $darkBlue;
       @include text-shadow;
