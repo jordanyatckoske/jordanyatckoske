@@ -14,29 +14,13 @@ import styles from "./layout.module.scss"
 import Icon from "../assets/DarkBackgroundGradient.svg"
 
 const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
-
   return (
     <>
-      {/* <Icon className={styles.background} /> */}
-
       <div className={styles.container}>
-        {/* <aside className={styles.menu}>aside</aside> */}
-        <Header siteTitle="Jordan Yatckoske" />
+        <Header />
         <main className={styles.main}>{children}</main>
-
         <footer>
           <h5>© {new Date().getFullYear()} Built by Jordan Yatckoske</h5>
-          {/* {` `} */}
-          {/* <a href="https://www.gatsbyjs.org">Gatsby</a> */}
         </footer>
       </div>
     </>

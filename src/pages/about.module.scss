@@ -1,18 +1,41 @@
 .title {
-  flex: 30%;
+  flex: 100%;
   text-align: center;
+  animation: slide-from-left 10s ease-in-out backwards;
 
+  h1 {
+    color: scale-color($color: $magenta, $lightness: 15%);
+  }
+  @include media(">tablet") {
+    flex: 30%;
+  }
   @include media(">=desktop") {
     text-align: right;
   }
 }
 .content {
-  flex: 70%;
+  flex: 100%;
   text-align: left;
-  padding: 0 0 0 2em;
   color: $magenta;
+  max-width: 90%;
 
+  h3 {
+    color: scale-color($color: $magenta, $lightness: 15%);
+    animation: slide-from-left 10s 0.5s ease-in-out backwards;
+  }
+  p {
+    color: $magenta;
+    animation: slide-down 10s 0.75s ease-in-out backwards;
+  }
+
+  @include media(">tablet") {
+    padding: 0 0 0 2em;
+    flex: 70%;
+  }
   @include media(">=desktop") {
-    max-width: 800px;
+    max-width: 650px;
+  }
+  @include media("<desktop", ">tablet") {
+    max-width: 65%;
   }
 }

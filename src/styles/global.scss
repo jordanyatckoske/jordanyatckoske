@@ -1,8 +1,14 @@
 @import "./include-media.scss";
 
+@mixin text-shadow {
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+@mixin box-shadow {
+  box-shadow: 5px 5px rgba(0, 0, 0, 0.2);
+}
+
 body {
-  height: 100vh;
-  width: 100vw;
   margin: 0;
 }
 a {
@@ -19,14 +25,12 @@ textarea {
   overflow: auto;
 }
 
-@mixin text-shadow {
-  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+h1,
+h3,
+h4,
+p {
+  @include text-shadow;
 }
-
-@mixin box-shadow {
-  box-shadow: 5px 5px rgba(0, 0, 0, 0.2);
-}
-
 .menu {
   display: flex;
 }
@@ -83,9 +87,9 @@ svg {
   }
 }
 
-.shape-left {
-  animation: slide-from-left 10s ease-in-out forwards;
-}
+// .shape-left {
+//   animation: slide-from-left 10s ease-in-out forwards;
+// }
 
 @keyframes slide-from-left {
   0% {
@@ -122,22 +126,20 @@ svg {
     opacity: 1;
   }
 }
-
-// // Extra small devices (portrait phones, less than 576px)
-// // No media query for `xs`
-
-// // Small devices (landscape phones, 576px and up)
-// @media (min-width: 576px) {
-// }
-
-// // Medium devices (tablets, 768px and up)
-// @media (min-width: 768px) {
-// }
-
-// // Large devices (desktops, 992px and up)
-// @media (min-width: 992px) {
-// }
-
-// // Extra large devices (large desktops, 1200px and up)
-// @media (min-width: 1200px) {
-// }
+@keyframes slide-up {
+  0% {
+    opacity: 0;
+    transform: translateY(30%);
+  }
+  10% {
+    opacity: 0;
+    transform: translateY(15%);
+  }
+  15% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+  100% {
+    opacity: 1;
+  }
+}

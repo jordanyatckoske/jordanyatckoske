@@ -7,11 +7,12 @@ import SEO from "../components/seo"
 
 const About = () => (
   <Layout>
-    {/* <SEO title="Page two" /> */}
+    <SEO title="About" />
     <div className={Styles.title}>
       <h1>About Me</h1>
     </div>
     <div className={Styles.content}>
+      <h3>Who is Jordan?</h3>
       <p>
         I am currently a senior at Concordia College in Moorhead, MN pursuing a
         degree Computer Science. My hope is to soon become a Full-Stack Web

@@ -6,20 +6,35 @@ import Styles from "./contact.module.scss"
 import SEO from "../components/seo"
 
 class About extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      name: "",
+      email: "",
+      message: "",
+    }
+  }
+
+  handleChange = type => event => this.setState({ [type]: event.target.value })
+
+  handleSubmit = event => event.preventDefault()
+
   render() {
     return (
       <Layout>
-        {/* <SEO title="Page two" /> */}
+        <SEO title="Contact" />
         <div className={Styles.content}>
           <h1>Contact Me</h1>
           <p>
             Send me a message to learn about my experience or inquire about
             possible development opportunities.
           </p>
-          <form>
+          <form onSubmit={this.handleSubmit}>
             <input
               name="name"
               type="text"
+              value={this.state.name}
+              onChange={this.handleChange("name")}
               placeholder="Name"
               autoFocus
               autoComplete="off"
@@ -27,10 +42,18 @@ class About extends React.Component {
             <input
               name="email"
               type="email"
+              value={this.state.email}
+              onChange={this.handleChange("email")}
               placeholder="Email"
               autoComplete="off"
             />
-            <textarea name="name" placeholder="Message" autoComplete="off" />
+            <textarea
+              name="message"
+              value={this.state.message}
+              onChange={this.handleChange("message")}
+              placeholder="Message"
+              autoComplete="off"
+            />
             <button name="submit" type="submit">
               Send Message
             </button>

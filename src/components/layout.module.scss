@@ -1,14 +1,12 @@
 .background {
-  // width: 100vw;
-  // height: 100vh;
   position: absolute;
   z-index: -1;
   left: 0;
   top: 0;
 }
 .container {
-  height: 100vh;
-  width: 100vw;
+  min-height: 100vh;
+  min-width: 100vw;
   display: flex;
   flex-direction: column;
 
@@ -84,7 +82,7 @@
     justify-content: center;
     @include text-shadow;
     h5 {
-      animation: slide-down 10s 0.5s backwards;
+      animation: slide-up 10s 0.5s backwards;
       color: $darkBlue;
     }
     @include media(">phone") {

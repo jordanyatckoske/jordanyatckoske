@@ -1,18 +1,14 @@
-h1,
-h4 {
-  color: $magenta;
-  @include text-shadow;
-}
-svg {
-  width: 100%;
-  height: 100%;
-}
 .graphic {
   flex: 100%;
 
   @include media(">tablet") {
     flex: 40%;
     align-items: center;
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
   }
 }
 .content {
@@ -21,9 +17,14 @@ svg {
   text-align: center;
   animation: slide-down 10s 0.25s backwards;
 
+  h1,
+  h4 {
+    color: $magenta;
+  }
+
   @include media(">tablet") {
     flex: 60%;
-    margin-left: 2rem;
+    // margin-left: 2rem;
     align-items: center;
   }
   p {
@@ -86,7 +87,12 @@ svg {
     &:hover {
       background-color: scale-color($color: $teal, $lightness: -50%);
       border: 1px solid transparent;
-      color: $darkNavy;
+      color: $navy;
+    }
+
+    &:focus {
+      outline: none;
+      border: 1px solid $teal;
     }
   }
 }

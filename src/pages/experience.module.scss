@@ -1,43 +1,59 @@
-h1,
-h4 {
-  color: $magenta;
-  @include text-shadow;
-}
-svg {
-  width: 100%;
-  height: 100%;
-}
-.graphic {
+.experience-graphic {
   flex: 100%;
-  //   position: absolute;
-  //   left: -50%;
+  margin: auto;
 
-  @include media(">tablet") {
+  @include media(">=tablet") {
     flex: 40%;
     align-items: center;
-    // position: relative;
-    // left: 0;
+    svg {
+      width: 50%;
+      height: 50%;
+    }
+  }
+
+  @include media("<tablet") {
+    text-align: center;
+    svg {
+      width: 50%;
+      height: 50%;
+    }
+  }
+
+  @include media(">=desktop") {
+    svg {
+      width: 100%;
+      height: 100%;
+    }
   }
 }
 .content {
   flex: 100%;
   align-self: flex-start;
 
-  @include media(">tablet") {
+  @include media(">=tablet") {
     flex: 60%;
     margin-left: 2rem;
+    p {
+      max-width: 75%;
+    }
+  }
+
+  @include media("<tablet") {
+    text-align: center;
+    max-width: 90%;
   }
 
   h1 {
-    animation: slide-from-left 10s ease-in-out forwards;
+    color: $teal;
+    animation: slide-from-right 10s ease-in-out forwards;
   }
   h3 {
     color: $teal;
     animation: slide-down 10s 0.5s backwards;
   }
   p {
+    color: scale-color($color: $teal, $lightness: -25%);
     animation: slide-down 10s 1s backwards;
-    color: $teal;
     opacity: 70%;
     margin: 1em;
   }
