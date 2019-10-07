@@ -16,9 +16,13 @@ const About = () => (
       <h1>Experience</h1>
       <h3>Freelance Web-Developer</h3>
       <p>
-        As a freelance developer, I have been working on many applications using
-        node and react. My focus is on clean design and writing code that can be
-        easily understood by other developers.
+        As a freelance developer, my passion for working with node and react has
+        continued to grow. My focus is on clean design and efficient planning to
+        create applications that are reliable and long-lasting. This website is
+        built using <em>GatsbyJs</em> utilizing <em>CCS modules</em> with{" "}
+        <em>SCSS</em> syntax, <em>webpack</em> bundles, and a{" "}
+        <em>service worker</em> to qualify for <em>PWA</em>
+        best practices and improved offline capability.
       </p>
       <h3>Stoneridge Software Devleoper Intern</h3>
       <p>
