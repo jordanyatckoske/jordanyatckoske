@@ -27,7 +27,7 @@ class About extends React.Component {
           <h1>Contact Me</h1>
           <p>
             Send me a message to learn about my experience or inquire about
-            possible development opportunities.
+            possible development opportunities!
           </p>
           <form onSubmit={this.handleSubmit}>
             <input

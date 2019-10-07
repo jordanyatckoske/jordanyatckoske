@@ -19,26 +19,36 @@ const About = () => (
         As a freelance developer, my passion for working with node and react has
         continued to grow. My focus is on clean design and efficient planning to
         create applications that are reliable and long-lasting. This website is
-        built using <em>GatsbyJs</em> utilizing <em>CCS modules</em> with{" "}
-        <em>SCSS</em> syntax, <em>webpack</em> bundles, and a{" "}
-        <em>service worker</em> to qualify for <em>PWA</em>
-        best practices and improved offline capability.
+        built using <em>GatsbyJs</em> utilizing CCS modules with <em>SCSS</em>{" "}
+        syntax. In addition, <em>webpack</em>, <em>Heroku</em>, and{" "}
+        <em>service workers</em> are used to ensure fast load times, efficient
+        deployment, and improved offline capability complying with <em>PWA</em>{" "}
+        best practices.
       </p>
       <h3>Stoneridge Software Devleoper Intern</h3>
       <p>
-        From the frist day on the job, I never felt like an intern at
-        Stoneridge. This is because I was continually integrated into important
-        decisions with production code. I worked with a small team to delivery
-        an agriculture application designed to help the efficiency of taking in
-        commodities in large co-ops.
+        From my first day, I never felt like an intern at Stoneridge. I was
+        continually integrated into important team decisions involving
+        production code impacting the design and usability of our web
+        application. Working on a small development team forced me out of my
+        comfort zone and taught me how to accomplish all assigned tasks. In the
+        end, our team's goal was to innovate the way large agriculturual co-ops
+        recieved commodities into their systems by desgining a fresh and
+        integraded web-application to ultimately improve effiencency in all
+        business practices.
       </p>
       <h3>Python Educator</h3>
       <p>
-        I have always had a passion for educating others and recently I was
-        presented with the opportunity to collaborate to createa YouTube channel
-        dedicated to Python education. I am responsible for creating engaging
-        content by researching popular Python libraries and presenting my
-        knowledge through real world projects and applications.
+        My passion for educating others has always been present and recently I
+        was presented with the opportunity to collaborate to create a YouTube
+        channel dedicated to Python education. Through this opportunity, I have
+        been responsible for creating engaging content for our audience through
+        intense research and planning. Our approach incorporates the most
+        popular Python libraries by presenting my knowledge and research through
+        relevant projects and applications designed to cater to a diverse
+        audience. Because of quick changes in technology, we are forced to stay
+        up to date and become translators from language documentation to
+        pracital uses in our applications.
       </p>
     </div>
   </Layout>

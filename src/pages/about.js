@@ -12,22 +12,26 @@ const About = () => (
       <h1>About Me</h1>
     </div>
     <div className={Styles.content}>
-      <h3>Who is Jordan?</h3>
+      <h3>Who am I?</h3>
       <p>
         I am currently a senior at Concordia College in Moorhead, MN pursuing a
-        degree Computer Science. My hope is to soon become a Full-Stack Web
-        developer at an organization that is inspiring and welcoming.
+        degree in Computer Science. As an aspiring Full-Stack Web developer, I
+        am searching for an inspiring organization striving to innovate in this
+        field.
       </p>
       <h3>Why am I a web developer?</h3>
       <p>
         Web development has given me a chance to express my passion for clean
         design and usable software. The variety within web development languages
-        has inspired be to continually learn more. A new langugage. A new
+        has inspired to become a continuous learner. A new langugage. A new
         framework. A new best practice. All of these give me a chance to grow my
-        knowledge and fail. And failing early on is the best way to learn.
+        knowledge and learn how to build resilience when failure occurs.
       </p>
       <h3>What inpires me?</h3>
-      <p>Learning. Creative design. People with different ideas than me.</p>
+      <p>
+        Learning new things, creative and usable design, and ideas that contrast
+        with my own.
+      </p>
       <h3>What will I bring to your organization?</h3>
       <p>
         A smile, a few jokes, an instilled love for learning, and a passion for
