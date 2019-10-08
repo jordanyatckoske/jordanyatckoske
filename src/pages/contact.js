@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
-
+import Icon from "../assets/linkedin-brands.svg"
 import Layout from "../components/layout"
 import Styles from "./contact.module.scss"
 import SEO from "../components/seo"
@@ -29,6 +29,15 @@ class About extends React.Component {
             Send me a message to learn about my experience or inquire about
             possible development opportunities!
           </p>
+          <div className={Styles.logos}>
+            <a
+              href="https://www.linkedin.com/in/jordan-yatckoske-523955135/"
+              target="_blank"
+            >
+              {" "}
+              <Icon />
+            </a>
+          </div>
           <form onSubmit={this.handleSubmit}>
             <input
               name="name"

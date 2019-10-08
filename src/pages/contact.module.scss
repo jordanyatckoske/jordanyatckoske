@@ -17,6 +17,21 @@
   text-align: center;
   animation: slide-down 10s 0.25s backwards;
 
+  .logos {
+    width: 2em;
+    height: 2em;
+    color: $magenta;
+    margin: auto;
+    animation: slide-down 10s 0.5s backwards;
+    transition: all 0.75s ease-in-out;
+
+    a {
+      color: $magenta;
+    }
+    &:hover {
+      color: scale-color($color: $magenta, $lightness: 15%);
+    }
+  }
   h1,
   h4 {
     color: $magenta;
