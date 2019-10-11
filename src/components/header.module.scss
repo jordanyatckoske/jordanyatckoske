@@ -2,38 +2,22 @@
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  transition: all 0.5s ease-in-out;
 
   @include media(">=tablet") {
     flex-direction: row;
-    h3 {
-      animation: slide-down 10s 0.5s backwards;
-    }
   }
 
   @include media("<tablet") {
-    .header-links {
-      animation: slide-down 5s backwards;
-      transition: all 0.25s ease-in-out;
-    }
-  }
-
-  .bars-logo {
-    padding: 0.5em;
-    margin: 1em 0 0 1em;
-    color: $teal;
-    width: 2em;
-    height: 2em;
-  }
-  .header-links {
-    margin-left: 1em;
-  }
-  h3 {
-    a {
-      color: $darkBlue;
-      transition: color 0.5s ease-in-out;
+    .bars-logo {
+      padding: 0.5em;
+      margin: 1em 0 0 1em;
+      color: $teal;
+      width: 2em;
+      height: 2em;
 
       &:hover {
-        color: $teal;
+        color: scale-color($color: $teal, $lightness: 20%);
       }
     }
   }

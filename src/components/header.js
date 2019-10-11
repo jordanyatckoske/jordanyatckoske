@@ -1,19 +1,29 @@
-import PropTypes from "prop-types"
 import React from "react"
 import Icon from "../assets/bars-solid.svg"
+import NavigationLinks from "./navigationLinks"
 import { graphql, useStaticQuery, StaticQuery } from "gatsby"
 import Styles from "./header.module.scss"
-import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 class Header extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
       navOpen: false,
+      width: null,
     }
     this.openNavClick = this.openNavClick.bind(this)
   }
 
+  updateWidth = () => {
+    this.setState({ width: window.innerWidth })
+  }
+  componentDidMount() {
+    this.setState({ width: window.innerWidth })
+    window.addEventListener("resize", this.updateWidth)
+  }
+  componentWillUnmount() {
+    window.removeEventListener("resize", this.updateWidth)
+  }
   openNavClick() {
     const navState = this.state.navOpen
     this.setState({ navOpen: !navState })
@@ -23,57 +33,16 @@ class Header extends React.Component {
     return (
       <>
         <header className={Styles.header}>
-          <span className={Styles.barsLogo} onClick={this.openNavClick}>
-            <Icon />
-          </span>
-          {this.state.navOpen ? (
-            <div className={Styles.headerLinks}>
-              <h3>
-                <AniLink
-                  cover
-                  bg="#062c51"
-                  top="enter"
-                  direction="up"
-                  entryOffset={90}
-                  to="/"
-                >
-                  {this.props.title}
-                </AniLink>
-              </h3>
-              <h3>
-                <AniLink
-                  cover
-                  bg="#062c51"
-                  top="exit"
-                  direction="right"
-                  to="/about"
-                >
-                  About
-                </AniLink>
-              </h3>
-              <h3>
-                <AniLink
-                  cover
-                  bg="#062c51"
-                  top="exit"
-                  direction="left"
-                  to="/experience"
-                >
-                  Experience
-                </AniLink>
-              </h3>
-              <h3>
-                <AniLink
-                  cover
-                  bg="#062c51"
-                  top="exit"
-                  direction="down"
-                  to="/contact"
-                >
-                  Contact
-                </AniLink>
-              </h3>
-            </div>
+          {this.state.width < 768 ? (
+            <span className={Styles.barsLogo} onClick={this.openNavClick}>
+              <Icon />
+            </span>
+          ) : null}
+          {this.state.navOpen && this.state.width < 768 ? (
+            <NavigationLinks title={this.props.title} />
+          ) : null}
+          {this.state.width >= 768 ? (
+            <NavigationLinks title={this.props.title} />
           ) : null}
         </header>
       </>
