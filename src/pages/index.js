@@ -8,6 +8,7 @@ import SEO from "../components/seo"
 
 const IndexPage = () => (
   <Layout>
+    <SEO title="Home" />
     <div className={Styles.graphic}>
       <Rectangles />
     </div>
@@ -15,8 +16,6 @@ const IndexPage = () => (
       <h1>Jordan Yatckoske</h1>
       <h4>Full-Stack Developer</h4>
     </div>
-    {/* <SEO title="Home" />    
-    <Link to="/page-2/">Go to page 2</Link> */}
   </Layout>
 )
 
