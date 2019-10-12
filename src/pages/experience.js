@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 
-import Icon from "../assets/CodeBars.svg"
+import CodeBars from "../assets/CodeBars.svg"
 import Styles from "./experience.module.scss"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -10,7 +10,7 @@ const About = () => (
   <Layout>
     <SEO title="Experience" />
     <div className={Styles.experienceGraphic}>
-      <Icon />
+      <CodeBars />
     </div>
     <div className={Styles.content}>
       <h1>Experience</h1>

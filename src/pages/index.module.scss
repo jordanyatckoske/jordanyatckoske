@@ -1,8 +1,22 @@
 .graphic {
   flex: 100%;
+  margin: auto;
+  text-align: center;
 
   @include media(">tablet") {
     flex: 70%;
+  }
+  @include media(">=tablet", "<desktop") {
+    svg {
+      height: 80%;
+      width: 80%;
+    }
+  }
+  @include media("<tablet") {
+    svg {
+      height: 100%;
+      width: 100%;
+    }
   }
 }
 

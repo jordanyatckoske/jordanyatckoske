@@ -1,6 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
-import Icon from "../assets/linkedin-brands.svg"
+import YLogo from "../assets/YLogo.svg"
+import LinkedInIcon from "../assets/linkedin-brands.svg"
 import Layout from "../components/layout"
 import Styles from "./contact.module.scss"
 import SEO from "../components/seo"
@@ -23,6 +24,10 @@ class About extends React.Component {
     return (
       <Layout>
         <SEO title="Contact" />
+        <div className={Styles.graphic}>
+          <YLogo />
+        </div>
+
         <div className={Styles.content}>
           <h1>Contact Me</h1>
           <p>
@@ -35,7 +40,7 @@ class About extends React.Component {
               target="_blank"
             >
               {" "}
-              <Icon />
+              <LinkedInIcon />
             </a>
           </div>
           <form onSubmit={this.handleSubmit}>
@@ -68,7 +73,6 @@ class About extends React.Component {
             </button>
           </form>
         </div>
-        <div className={Styles.graphic}></div>
       </Layout>
     )
   }

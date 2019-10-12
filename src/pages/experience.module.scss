@@ -5,7 +5,7 @@
   @include media(">=tablet") {
     flex: 30%;
     align-items: center;
-    margin-top: 3rem;
+    margin-top: 3em;
     svg {
       // width: 50%;
       // height: 50%;
@@ -14,7 +14,7 @@
 
   @include media("<tablet") {
     text-align: center;
-    margin-top: 0;
+    margin-top: 1.5em;
     svg {
       width: 50%;
       height: 50%;
@@ -34,7 +34,7 @@
 
   @include media(">=tablet") {
     flex: 60%;
-    margin-left: 2rem;
+    margin-left: 2em;
     p {
       max-width: 75%;
     }

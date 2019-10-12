@@ -3,13 +3,13 @@ import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import Styles from "./index.module.scss"
-import Icon from "../assets/TransparentRectangles.svg"
+import Rectangles from "../assets/TransparentRectangles.svg"
 import SEO from "../components/seo"
 
 const IndexPage = () => (
   <Layout>
     <div className={Styles.graphic}>
-      <Icon />
+      <Rectangles />
     </div>
     <div className={Styles.content}>
       <h1>Jordan Yatckoske</h1>

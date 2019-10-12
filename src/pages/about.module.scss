@@ -1,16 +1,24 @@
-.title {
+.graphic {
   flex: 100%;
   text-align: center;
-  animation: slide-from-left 10s ease-in-out backwards;
-
-  h1 {
-    color: scale-color($color: $magenta, $lightness: 15%);
-  }
+  margin: auto;
   @include media(">tablet") {
     flex: 30%;
   }
   @include media(">=desktop") {
     text-align: right;
+    svg {
+      width: 80%;
+      height: 80%;
+      max-height: 400px;
+    }
+  }
+  @include media("<tablet") {
+    margin-top: 1.5em;
+    svg {
+      width: 40%;
+      height: 40%;
+    }
   }
 }
 .content {
@@ -18,7 +26,10 @@
   text-align: left;
   color: $magenta;
   max-width: 90%;
-
+  h1 {
+    color: scale-color($color: $magenta, $lightness: 15%);
+    animation: slide-from-left 10s ease-in-out backwards;
+  }
   h3 {
     color: scale-color($color: $magenta, $lightness: 15%);
     animation: slide-from-left 10s 0.5s ease-in-out backwards;

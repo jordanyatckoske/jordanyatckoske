@@ -2,16 +2,19 @@ import React from "react"
 import { Link } from "gatsby"
 
 import Layout from "../components/layout"
+import CameraLens from "../assets/CameraLens.svg"
 import Styles from "./about.module.scss"
 import SEO from "../components/seo"
 
 const About = () => (
   <Layout>
     <SEO title="About" />
-    <div className={Styles.title}>
-      <h1>About Me</h1>
+    <div className={Styles.graphic}>
+      <CameraLens />
     </div>
     <div className={Styles.content}>
+      <h1>About Me</h1>
+
       <h3>Who am I?</h3>
       <p>
         I am currently a senior at Concordia College in Moorhead, MN pursuing a

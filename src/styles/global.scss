@@ -64,6 +64,12 @@ svg {
   .cls-8 {
     animation: slide-from-left 10s 0.75s ease-in-out backwards;
   }
+  .y-logo-left {
+    animation: slide-from-left 10s 0.15s backwards;
+  }
+  .y-logo-right {
+    animation: slide-from-left 10s 0.2s backwards;
+  }
 }
 
 @keyframes slide-from-right {
