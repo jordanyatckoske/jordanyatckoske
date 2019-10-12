@@ -64,9 +64,6 @@ svg {
   .cls-8 {
     animation: slide-from-left 10s 0.75s ease-in-out backwards;
   }
-  .shape-right {
-    animation: slide-from-right 10s ease-in-out forwards;
-  }
 }
 
 @keyframes slide-from-right {
@@ -86,10 +83,6 @@ svg {
     opacity: 1;
   }
 }
-
-// .shape-left {
-//   animation: slide-from-left 10s ease-in-out forwards;
-// }
 
 @keyframes slide-from-left {
   0% {

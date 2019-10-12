@@ -3,16 +3,18 @@
   margin: auto;
 
   @include media(">=tablet") {
-    flex: 40%;
+    flex: 30%;
     align-items: center;
+    margin-top: 3rem;
     svg {
-      width: 50%;
-      height: 50%;
+      // width: 50%;
+      // height: 50%;
     }
   }
 
   @include media("<tablet") {
     text-align: center;
+    margin-top: 0;
     svg {
       width: 50%;
       height: 50%;

@@ -15,10 +15,31 @@
       color: $teal;
       width: 2em;
       height: 2em;
+      transition: all 0.5s ease-in-out;
+      animation: slide-down 5s backwards;
 
       &:hover {
         color: scale-color($color: $teal, $lightness: 20%);
       }
     }
+  }
+  .display-enter {
+    opacity: 0;
+    transform: rotateX(90deg) perspective(0px);
+    transform-origin: 50% top;
+  }
+  .display-enter-active {
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 300ms, transform 300ms;
+  }
+  .display-exit {
+    opacity: 1;
+  }
+  .display-exit-active {
+    opacity: 0;
+    transform: rotateX(-90deg) perspective(0px);
+    transform-origin: 50% top;
+    transition: opacity 300ms, transform 300ms;
   }
 }

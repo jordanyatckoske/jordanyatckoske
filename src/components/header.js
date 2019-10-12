@@ -3,6 +3,7 @@ import Icon from "../assets/bars-solid.svg"
 import NavigationLinks from "./navigationLinks"
 import { graphql, useStaticQuery, StaticQuery } from "gatsby"
 import Styles from "./header.module.scss"
+import { CSSTransition } from "react-transition-group"
 
 class Header extends React.Component {
   constructor(props) {
@@ -16,6 +17,9 @@ class Header extends React.Component {
 
   updateWidth = () => {
     this.setState({ width: window.innerWidth })
+    if (this.state.width >= 768) {
+      this.setState({ navOpen: false })
+    }
   }
   componentDidMount() {
     this.setState({ width: window.innerWidth })
@@ -38,9 +42,21 @@ class Header extends React.Component {
               <Icon />
             </span>
           ) : null}
-          {this.state.navOpen && this.state.width < 768 ? (
+          <CSSTransition
+            in={this.state.navOpen}
+            timeout={350}
+            classNames={{
+              enter: Styles.displayEnter,
+              enterActive: Styles.displayEnterActive,
+              exit: Styles.displayExit,
+              exitActive: Styles.displayExitActive,
+            }}
+            unmountOnExit
+          >
+            {/* {this.state.navOpen && this.state.width < 768 ? ( */}
             <NavigationLinks title={this.props.title} />
-          ) : null}
+            {/* ) : null} */}
+          </CSSTransition>
           {this.state.width >= 768 ? (
             <NavigationLinks title={this.props.title} />
           ) : null}
