@@ -6,10 +6,6 @@
     flex: 30%;
     align-items: center;
     margin-top: 3em;
-    svg {
-      // width: 50%;
-      // height: 50%;
-    }
   }
 
   @include media("<tablet") {
@@ -46,6 +42,9 @@
   }
 
   h1 {
+    -webkit-animation: slide-from-right 10s ease-in-out forwards;
+    -moz-animation: slide-from-right 10s ease-in-out forwards;
+    -o-animation: slide-from-right 10s ease-in-out forwards;
     animation: slide-from-right 10s ease-in-out forwards;
   }
   h1:after {
@@ -53,10 +52,16 @@
   }
   h3 {
     color: $teal;
+    -webkit-animation: slide-down 10s 0.5s backwards;
+    -moz-animation: slide-down 10s 0.5s backwards;
+    -o-animation: slide-down 10s 0.5s backwards;
     animation: slide-down 10s 0.5s backwards;
   }
   p {
     color: scale-color($color: $teal, $lightness: -25%);
+    -webkit-animation: slide-down 10s 1s backwards;
+    -moz-animation: slide-down 10s 1s backwards;
+    -o-animation: slide-down 10s 1s backwards;
     animation: slide-down 10s 1s backwards;
     opacity: 70%;
     margin: 1em;

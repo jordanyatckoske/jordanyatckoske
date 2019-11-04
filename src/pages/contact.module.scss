@@ -2,6 +2,7 @@
   flex: 100%;
   text-align: center;
   margin: auto;
+
   @include media(">tablet") {
     flex: 30%;
     svg {
@@ -9,6 +10,7 @@
       height: 60%;
     }
   }
+
   @include media(">=desktop") {
     text-align: right;
     svg {
@@ -16,6 +18,7 @@
       height: 50%;
     }
   }
+
   @include media("<tablet") {
     margin-top: 1.5em;
     svg {
@@ -28,6 +31,9 @@
   flex: 100%;
   align-self: flex-start;
   text-align: center;
+  -webkit-animation: slide-down 10s 0.25s backwards;
+  -moz-animation: slide-down 10s 0.25s backwards;
+  -o-animation: slide-down 10s 0.25s backwards;
   animation: slide-down 10s 0.25s backwards;
 
   .logos {
@@ -35,6 +41,9 @@
     height: 3em;
     color: $teal;
     margin: auto;
+    -webkit-animation: slide-down 10s 0.5s backwards;
+    -moz-animation: slide-down 10s 0.5s backwards;
+    -o-animation: slide-down 10s 0.5s backwards;
     animation: slide-down 10s 0.5s backwards;
     transition: all 0.75s ease-in-out;
 
@@ -61,6 +70,9 @@
   h3 {
     display: relative;
     color: scale-color($color: $teal, $lightness: 20%);
+    -webkit-animation: slide-down 10s 0.5s backwards;
+    -moz-animation: slide-down 10s 0.5s backwards;
+    -o-animation: slide-down 10s 0.5s backwards;
     animation: slide-down 10s 0.5s backwards;
     max-width: 80%;
     margin: 1em auto;
@@ -84,6 +96,9 @@
     text-align: left;
     width: 80%;
     border-radius: 1.5em;
+    -webkit-animation: slide-down 10s 0.75s backwards;
+    -moz-animation: slide-down 10s 0.75s backwards;
+    -o-animation: slide-down 10s 0.75s backwards;
     animation: slide-down 10s 0.75s backwards;
     transition: all 0.75s ease-in-out;
 
@@ -116,6 +131,9 @@
     width: 80%;
     left: 50%;
     transition: all 0.75s ease-in-out;
+    -webkit-animation: slide-down 10s 1s backwards;
+    -moz-animation: slide-down 10s 1s backwards;
+    -o-animation: slide-down 10s 1s backwards;
     animation: slide-down 10s 1s backwards;
 
     @include box-shadow;

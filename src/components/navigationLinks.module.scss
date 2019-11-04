@@ -7,6 +7,9 @@
 
   @include media(">=tablet") {
     flex-direction: row;
+    -webkit-animation: slide-down 4s backwards;
+    -moz-animation: slide-down 4s backwards;
+    -o-animation: slide-down 4s backwards;
     animation: slide-down 4s backwards;
 
     h3 {
@@ -37,9 +40,6 @@
           color: scale-color($color: $teal, $lightness: 15%);
         }
       }
-
-      //   width: 100%;
-      //   height: 20%;
     }
   }
 
