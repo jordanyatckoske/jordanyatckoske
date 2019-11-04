@@ -33,6 +33,9 @@ p {
 }
 h1 {
   color: scale-color($color: $darkNavy, $lightness: 15%);
+  -webkit-animation: slide-up 10s ease-in-out backwards;
+  -moz-animation: slide-up 10s ease-in-out backwards;
+  -o-animation: slide-up 10s ease-in-out backwards;
   animation: slide-up 10s ease-in-out backwards;
   display: inline;
   position: relative;
@@ -49,6 +52,9 @@ h1:after {
 
 h4 {
   color: scale-color($color: $darkNavy, $lightness: 15%);
+  -webkit-animation: slide-down 10s 0.5s ease-in-out backwards;
+  -moz-animation: slide-down 10s 0.5s ease-in-out backwards;
+  -o-animation: slide-down 10s 0.5s ease-in-out backwards;
   animation: slide-down 10s 0.5s ease-in-out backwards;
   font-size: 2rem;
   margin: 0 0 0 1em;
@@ -71,33 +77,63 @@ svg {
     filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.7));
   }
   .cls-1 {
+    -webkit-animation: slide-from-left 10s 1s ease-in-out backwards;
+    -moz-animation: slide-from-left 10s 1s ease-in-out backwards;
+    -o-animation: slide-from-left 10s 1s ease-in-out backwards;
     animation: slide-from-left 10s 1s ease-in-out backwards;
   }
   .cls-2 {
+    -webkit-animation: slide-from-left 10s 0.75s ease-in-out backwards;
+    -moz-animation: slide-from-left 10s 0.75s ease-in-out backwards;
+    -o-animation: slide-from-left 10s 0.75s ease-in-out backwards;
     animation: slide-from-left 10s 0.75s ease-in-out backwards;
   }
   .cls-3 {
+    -webkit-animation: slide-from-right 10s 0.75s ease-in-out backwards;
+    -moz-animation: slide-from-right 10s 0.75s ease-in-out backwards;
+    -o-animation: slide-from-right 10s 0.75s ease-in-out backwards;
     animation: slide-from-right 10s 0.75s ease-in-out backwards;
   }
   .cls-4 {
+    -webkit-animation: slide-from-right 10s 1s ease-in-out backwards;
+    -moz-animation: slide-from-right 10s 1s ease-in-out backwards;
+    -o-animation: slide-from-right 10s 1s ease-in-out backwards;
     animation: slide-from-right 10s 1s ease-in-out backwards;
   }
   .cls-5 {
+    -webkit-animation: slide-from-right 10s 1s ease-in-out backwards;
+    -moz-animation: slide-from-right 10s 1s ease-in-out backwards;
+    -o-animation: slide-from-right 10s 1s ease-in-out backwards;
     animation: slide-from-right 10s 1s ease-in-out backwards;
   }
   .cls-6 {
+    -webkit-animation: slide-from-right 10s 1.25s ease-in-out backwards;
+    -moz-animation: slide-from-right 10s 1.25s ease-in-out backwards;
+    -o-animation: slide-from-right 10s 1.25s ease-in-out backwards;
     animation: slide-from-right 10s 1.25s ease-in-out backwards;
   }
   .cls-7 {
+    -webkit-animation: slide-from-left 10s 1.25s ease-in-out backwards;
+    -moz-animation: slide-from-left 10s 1.25s ease-in-out backwards;
+    -o-animation: slide-from-left 10s 1.25s ease-in-out backwards;
     animation: slide-from-left 10s 1.25s ease-in-out backwards;
   }
   .cls-8 {
+    -webkit-animation: slide-from-left 10s 0.75s ease-in-out backwards;
+    -moz-animation: slide-from-left 10s 0.75s ease-in-out backwards;
+    -o-animation: slide-from-left 10s 0.75s ease-in-out backwards;
     animation: slide-from-left 10s 0.75s ease-in-out backwards;
   }
   .y-logo-left {
+    -webkit-animation: slide-from-left 10s 0.15s backwards;
+    -moz-animation: slide-from-left 10s 0.15s backwards;
+    -o-animation: slide-from-left 10s 0.15s backwards;
     animation: slide-from-left 10s 0.15s backwards;
   }
   .y-logo-right {
+    -webkit-animation: slide-from-left 10s 0.2s backwards;
+    -moz-animation: slide-from-left 10s 0.2s backwards;
+    -o-animation: slide-from-left 10s 0.2s backwards;
     animation: slide-from-left 10s 0.2s backwards;
   }
 }
