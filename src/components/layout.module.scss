@@ -76,6 +76,9 @@
     justify-content: center;
     @include text-shadow;
     h5 {
+      -webkit-animation: slide-up 10s 0.5s backwards;
+      -moz-animation: slide-up 10s 0.5s backwards;
+      -o-animation: slide-up 10s 0.5s backwards;
       animation: slide-up 10s 0.5s backwards;
       color: $darkBlue;
     }

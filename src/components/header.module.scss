@@ -16,6 +16,9 @@
       width: 2em;
       height: 2em;
       transition: all 0.5s ease-in-out;
+      -webkit-animation: slide-down 5s backwards;
+      -moz-animation: slide-down 5s backwards;
+      -o-animation: slide-down 5s backwards;
       animation: slide-down 5s backwards;
 
       &:hover {

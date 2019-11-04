@@ -189,7 +189,6 @@ svg {
     opacity: 1;
   }
 }
-
 @keyframes slide-from-right {
   0% {
     opacity: 0;
@@ -208,6 +207,57 @@ svg {
   }
 }
 
+@-webkit-keyframes slide-from-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-30%);
+  }
+  10% {
+    opacity: 0;
+    transform: translateX(-15%);
+  }
+  15% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-moz-keyframes slide-from-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-30%);
+  }
+  10% {
+    opacity: 0;
+    transform: translateX(-15%);
+  }
+  15% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-o-keyframes slide-from-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-30%);
+  }
+  10% {
+    opacity: 0;
+    transform: translateX(-15%);
+  }
+  15% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+  100% {
+    opacity: 1;
+  }
+}
 @keyframes slide-from-left {
   0% {
     opacity: 0;
@@ -226,6 +276,57 @@ svg {
   }
 }
 
+@-webkit-keyframes slide-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-30%);
+  }
+  10% {
+    opacity: 0;
+    transform: translateY(-15%);
+  }
+  15% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-moz-keyframes slide-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-30%);
+  }
+  10% {
+    opacity: 0;
+    transform: translateY(-15%);
+  }
+  15% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-o-keyframes slide-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-30%);
+  }
+  10% {
+    opacity: 0;
+    transform: translateY(-15%);
+  }
+  15% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+  100% {
+    opacity: 1;
+  }
+}
 @keyframes slide-down {
   0% {
     opacity: 0;
@@ -234,6 +335,58 @@ svg {
   10% {
     opacity: 0;
     transform: translateY(-15%);
+  }
+  15% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes slide-up {
+  0% {
+    opacity: 0;
+    transform: translateY(30%);
+  }
+  10% {
+    opacity: 0;
+    transform: translateY(15%);
+  }
+  15% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-moz-keyframes slide-up {
+  0% {
+    opacity: 0;
+    transform: translateY(30%);
+  }
+  10% {
+    opacity: 0;
+    transform: translateY(15%);
+  }
+  15% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-o-keyframes slide-up {
+  0% {
+    opacity: 0;
+    transform: translateY(30%);
+  }
+  10% {
+    opacity: 0;
+    transform: translateY(15%);
   }
   15% {
     opacity: 1;

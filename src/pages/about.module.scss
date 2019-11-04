@@ -2,9 +2,11 @@
   flex: 100%;
   text-align: center;
   margin: auto;
+
   @include media(">tablet") {
     flex: 30%;
   }
+
   @include media(">=desktop") {
     text-align: center;
     svg {
@@ -13,6 +15,7 @@
       max-height: 300px;
     }
   }
+
   @include media(">=tablet", "<desktop") {
     svg {
       width: 75%;
@@ -20,6 +23,7 @@
       max-height: 350px;
     }
   }
+
   @include media("<tablet") {
     margin-top: 1.5em;
     svg {
@@ -34,6 +38,9 @@
   color: $magenta;
   max-width: 90%;
   h1 {
+    -webkit-animation: slide-from-left 10s ease-in-out backwards;
+    -moz-animation: slide-from-left 10s ease-in-out backwards;
+    -o-animation: slide-from-left 10s ease-in-out backwards;
     animation: slide-from-left 10s ease-in-out backwards;
   }
   h1:after {
@@ -41,10 +48,16 @@
   }
   h3 {
     color: scale-color($color: $teal, $lightness: 40%);
+    -webkit-animation: slide-from-left 10s 0.5s ease-in-out backwards;
+    -moz-animation: slide-from-left 10s 0.5s ease-in-out backwards;
+    -o-animation: slide-from-left 10s 0.5s ease-in-out backwards;
     animation: slide-from-left 10s 0.5s ease-in-out backwards;
   }
   p {
     color: scale-color($color: $teal, $lightness: -15%);
+    -webkit-animation: slide-down 10s 0.75s ease-in-out backwards;
+    -moz-animation: slide-down 10s 0.75s ease-in-out backwards;
+    -o-animation: slide-down 10s 0.75s ease-in-out backwards;
     animation: slide-down 10s 0.75s ease-in-out backwards;
   }
   @include media("<tablet") {
