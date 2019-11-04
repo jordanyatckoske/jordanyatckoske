@@ -1,7 +1,7 @@
 import React from "react"
 import Icon from "../assets/bars-solid.svg"
 import NavigationLinks from "./navigationLinks"
-import { graphql, useStaticQuery, StaticQuery } from "gatsby"
+import { graphql, StaticQuery } from "gatsby"
 import Styles from "./header.module.scss"
 import { CSSTransition } from "react-transition-group"
 
@@ -80,11 +80,3 @@ export default () => (
     render={data => <Header title={data.site.siteMetadata.title} />}
   />
 )
-
-// Header.propTypes = {
-//   siteTitle: PropTypes.string,
-// }
-
-// Header.defaultProps = {
-//   siteTitle: ``,
-// }

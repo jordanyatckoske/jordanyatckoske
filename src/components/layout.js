@@ -7,11 +7,9 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
 import styles from "./layout.module.scss"
-import Icon from "../assets/DarkBackgroundGradient.svg"
 
 const Layout = ({ children }) => {
   return (

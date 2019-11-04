@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import CameraLens from "../assets/CameraLens.svg"
@@ -13,7 +12,7 @@ const About = () => (
       <CameraLens />
     </div>
     <div className={Styles.content}>
-      <h1>About Me</h1>
+      <h1>ABOUT ME</h1>
 
       <h3>Who am I?</h3>
       <p>
@@ -26,7 +25,7 @@ const About = () => (
       <p>
         Web development has given me a chance to express my passion for clean
         design and usable software. The variety within web development languages
-        has inspired to become a continuous learner. A new langugage. A new
+        has inspired me to become a continuous learner. A new langugage. A new
         framework. A new best practice. All of these give me a chance to grow my
         knowledge and learn how to build resilience when failure occurs.
       </p>

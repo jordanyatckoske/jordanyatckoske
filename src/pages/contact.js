@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "gatsby"
+
 import YLogo from "../assets/YLogo.svg"
 import LinkedInIcon from "../assets/linkedin-brands.svg"
 import Layout from "../components/layout"
@@ -29,15 +29,17 @@ class About extends React.Component {
         </div>
 
         <div className={Styles.content}>
-          <h1>Contact Me</h1>
-          <p>
+          <h1>CONTACT ME</h1>
+          <h3>
             Send me a message to learn about my experience or inquire about
             possible development opportunities!
-          </p>
+          </h3>
           <div className={Styles.logos}>
             <a
+              alt="LinkedIn"
               href="https://www.linkedin.com/in/jordan-yatckoske-523955135/"
               target="_blank"
+              rel="noopener"
             >
               {" "}
               <LinkedInIcon />
@@ -50,7 +52,6 @@ class About extends React.Component {
               value={this.state.name}
               onChange={this.handleChange("name")}
               placeholder="Name"
-              autoFocus
               autoComplete="off"
             />
             <input

@@ -30,7 +30,7 @@
     width: 85%;
 
     h3 {
-      margin-left: 2em;
+      margin-left: 1.5em;
       a {
         color: $teal;
         &:hover {
@@ -48,5 +48,9 @@
     a {
       transition: color 0.5s ease-in-out;
     }
+  }
+
+  .active-link {
+    color: $magenta;
   }
 }

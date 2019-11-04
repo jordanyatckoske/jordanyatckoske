@@ -23,8 +23,8 @@
 
   @include media(">=desktop") {
     svg {
-      width: 100%;
-      height: 100%;
+      width: 80%;
+      height: 80%;
     }
   }
 }
@@ -42,12 +42,14 @@
 
   @include media("<tablet") {
     text-align: center;
-    max-width: 90%;
+    max-width: 95%;
   }
 
   h1 {
-    color: $teal;
     animation: slide-from-right 10s ease-in-out forwards;
+  }
+  h1:after {
+    content: "EXPERIENCE";
   }
   h3 {
     color: $teal;

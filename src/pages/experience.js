@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 
 import CodeBars from "../assets/CodeBars.svg"
 import Styles from "./experience.module.scss"
@@ -13,7 +12,7 @@ const About = () => (
       <CodeBars />
     </div>
     <div className={Styles.content}>
-      <h1>Experience</h1>
+      <h1>EXPERIENCE</h1>
       <h3>Freelance Web-Developer</h3>
       <p>
         As a freelance developer, my passion for working with node and react has
@@ -22,8 +21,8 @@ const About = () => (
         built using <em>GatsbyJs</em> utilizing CCS modules with <em>SCSS</em>{" "}
         syntax. In addition, <em>webpack</em>, <em>Heroku</em>, and{" "}
         <em>service workers</em> are used to ensure fast load times, efficient
-        deployment, and improved offline capability complying with <em>PWA</em>{" "}
-        best practices.
+        deployment, and improved offline capability while complying with{" "}
+        <em>PWA</em> and responsive web design best practices.
       </p>
       <h3>Stoneridge Software Devleoper Intern</h3>
       <p>
@@ -39,16 +38,17 @@ const About = () => (
       </p>
       <h3>Python Educator</h3>
       <p>
-        My passion for educating others has always been present and recently I
-        was presented with the opportunity to collaborate to create a YouTube
-        channel dedicated to Python education. Through this opportunity, I have
-        been responsible for creating engaging content for our audience through
-        intense research and planning. Our approach incorporates the most
-        popular Python libraries by presenting my knowledge and research through
-        relevant projects and applications designed to cater to a diverse
-        audience. Because of quick changes in technology, we are forced to stay
-        up to date and become translators from language documentation to
-        pracital uses in our applications.
+        I have always had a passion for educating others and recently I was
+        presented with the opportunity to collaborate on a dream to create a
+        YouTube channel dedicated to Python education. Through this opportunity,
+        I have been responsible for creating engaging content for our audience
+        through intense research and planning. Our approach incorporates the
+        most popular Python libraries by presenting my knowledge and research
+        through relevant projects and applications designed to cater to a
+        diverse audience. Because of quick changes in technology, we are forced
+        to stay up to date and become translators from language documentation to
+        pracital uses in the real world to stay relevant and engage our
+        audience.
       </p>
     </div>
   </Layout>

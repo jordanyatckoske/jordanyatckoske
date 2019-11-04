@@ -8,8 +8,14 @@
   }
   @include media(">=tablet", "<desktop") {
     svg {
-      height: 80%;
-      width: 80%;
+      height: 65%;
+      width: 65%;
+    }
+  }
+  @include media(">=desktop") {
+    svg {
+      height: 70%;
+      width: 70%;
     }
   }
   @include media("<tablet") {
@@ -24,14 +30,36 @@
   padding: 0 0 0 2em;
   flex: 100%;
 
-  h1 {
-    color: $magenta;
-    animation: slide-up 10s ease-in-out backwards;
+  // h1 {
+  //   color: scale-color($color: $darkNavy, $lightness: 15%);
+  //   animation: slide-up 10s ease-in-out backwards;
+  //   display: inline;
+  //   position: relative;
+  //   font-size: 4rem;
+  // }
+  h1:after {
+    content: "JORDAN YATCKOSKE";
+    //   position: absolute;
+    //   display: inline;
+    //   left: -8px;
+    //   top: 3px;
+    //   color: scale-color($color: $teal, $lightness: 40%);
   }
-  h4 {
-    color: scale-color($color: $magenta, $lightness: -15%);
-    animation: slide-down 10s 0.5s ease-in-out backwards;
-  }
+
+  // h4 {
+  //   color: scale-color($color: $darkNavy, $lightness: 15%);
+  //   animation: slide-down 10s 0.5s ease-in-out backwards;
+  //   font-size: 2rem;
+  //   margin: 0 0 0 1em;
+  // }
+  // @include media("<=tablet") {
+  //   h1 {
+  //     font-size: 2rem;
+  //   }
+  //   h4 {
+  //     font-size: 1rem;
+  //   }
+  // }
 
   @include media(">tablet") {
     flex: 30%;

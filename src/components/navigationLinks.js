@@ -13,22 +13,22 @@ const NavigationLinks = ({ title }) => (
         entryOffset={90}
         to="/"
       >
-        {title}
+        {title.toUpperCase()}
       </AniLink>
     </h3>
     <h3>
       <AniLink cover bg="#062c51" top="exit" direction="right" to="/about">
-        About
+        ABOUT
       </AniLink>
     </h3>
     <h3>
       <AniLink cover bg="#062c51" top="exit" direction="left" to="/experience">
-        Experience
+        EXPERIENCE
       </AniLink>
     </h3>
     <h3>
       <AniLink cover bg="#062c51" top="exit" direction="down" to="/contact">
-        Contact
+        CONTACT
       </AniLink>
     </h3>
   </div>

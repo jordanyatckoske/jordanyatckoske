@@ -1,6 +1,5 @@
 .graphic {
   flex: 100%;
-  // align-items: center;
   text-align: center;
   margin: auto;
   @include media(">tablet") {
@@ -13,8 +12,8 @@
   @include media(">=desktop") {
     text-align: right;
     svg {
-      width: 60%;
-      height: 60%;
+      width: 50%;
+      height: 50%;
     }
   }
   @include media("<tablet") {
@@ -32,34 +31,39 @@
   animation: slide-down 10s 0.25s backwards;
 
   .logos {
-    width: 2em;
-    height: 2em;
-    color: $magenta;
+    width: 3em;
+    height: 3em;
+    color: $teal;
     margin: auto;
     animation: slide-down 10s 0.5s backwards;
     transition: all 0.75s ease-in-out;
 
     a {
-      color: $magenta;
-    }
-    &:hover {
-      color: scale-color($color: $magenta, $lightness: 15%);
+      color: $teal;
+      transition: all 0.75s ease-in-out;
+      &:hover {
+        color: scale-color($color: $navy, $lightness: 60%);
+      }
     }
   }
-  h1,
-  h4 {
-    color: $magenta;
+  .logo-text {
+    display: inline;
+    margin: 1em 0 0 0;
+  }
+  h1:after {
+    content: "CONTACT ME";
   }
 
   @include media(">tablet") {
     flex: 70%;
     align-items: center;
   }
-  p {
-    display: inline-flex;
-    color: $magenta;
+  h3 {
+    display: relative;
+    color: scale-color($color: $teal, $lightness: 20%);
     animation: slide-down 10s 0.5s backwards;
     max-width: 80%;
+    margin: 1em auto;
 
     @include media(">tablet", "<=desktop") {
       max-width: 70%;

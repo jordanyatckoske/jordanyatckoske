@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import Styles from "./index.module.scss"
@@ -13,7 +12,7 @@ const IndexPage = () => (
       <Rectangles />
     </div>
     <div className={Styles.content}>
-      <h1>Jordan Yatckoske</h1>
+      <h1>JORDAN YATCKOSKE</h1>
       <h4>Full-Stack Developer</h4>
     </div>
   </Layout>

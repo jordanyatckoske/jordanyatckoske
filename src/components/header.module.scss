@@ -23,6 +23,9 @@
       }
     }
   }
+  .active {
+    color: $magenta;
+  }
   .display-enter {
     opacity: 0;
     transform: rotateX(90deg) perspective(0px);
