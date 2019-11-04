@@ -138,6 +138,58 @@ svg {
   }
 }
 
+@-webkit-keyframes slide-from-right {
+  0% {
+    opacity: 0;
+    transform: translateX(30%);
+  }
+  10% {
+    opacity: 0;
+    transform: translateX(15%);
+  }
+  15% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-moz-keyframes slide-from-right {
+  0% {
+    opacity: 0;
+    transform: translateX(30%);
+  }
+  10% {
+    opacity: 0;
+    transform: translateX(15%);
+  }
+  15% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-o-keyframes slide-from-right {
+  0% {
+    opacity: 0;
+    transform: translateX(30%);
+  }
+  10% {
+    opacity: 0;
+    transform: translateX(15%);
+  }
+  15% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 @keyframes slide-from-right {
   0% {
     opacity: 0;

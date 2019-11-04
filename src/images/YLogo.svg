@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 386.28 534.8">
+    <defs>
+        <style>
+            .y-logo-left{fill:url(#NavyPurpleGradient);}
+            .y-logo-right{fill:url(#linear-gradient);}
+        </style>
+        <linearGradient id="NavyPurpleGradient" x1="437.43" y1="68.46" x2="175.33" y2="240.77" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#0378c0"/><stop offset="0.09" stop-color="#206ac3" stop-opacity="0.95"/><stop offset="0.21" stop-color="#4259c6" stop-opacity="0.9"/><stop offset="0.35" stop-color="#5c4cc9" stop-opacity="0.85"/><stop offset="0.51" stop-color="#6f43cb" stop-opacity="0.82"/><stop offset="0.69" stop-color="#7a3ecc" stop-opacity="0.81"/><stop offset="0.98" stop-color="#7d3ccc" stop-opacity="0.8"/></linearGradient>
+        <linearGradient id="linear-gradient" x1="-3.23" y1="8.75" x2="177.34" y2="649.5" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#2ff7fb"/><stop offset="0" stop-color="#2ff6fa"/><stop offset="0.07" stop-color="#23d4eb" stop-opacity="0.95"/><stop offset="0.14" stop-color="#1ab8de" stop-opacity="0.9"/><stop offset="0.22" stop-color="#12a1d3" stop-opacity="0.86"/><stop offset="0.3" stop-color="#0c8fca" stop-opacity="0.84"/><stop offset="0.39" stop-color="#0782c5" stop-opacity="0.82"/><stop offset="0.49" stop-color="#057ac1" stop-opacity="0.8"/><stop offset="0.65" stop-color="#0478c0" stop-opacity="0.8"/><stop offset="0.69" stop-color="#067ec3" stop-opacity="0.81"/><stop offset="0.75" stop-color="#0b8eca" stop-opacity="0.83"/><stop offset="0.83" stop-color="#14a8d6" stop-opacity="0.88"/><stop offset="0.91" stop-color="#21cce7" stop-opacity="0.93"/><stop offset="1" stop-color="#2ff7fb"/></linearGradient>
+    </defs>
+    <title>YLogo</title>
+    <g id="Layer_2" data-name="Layer 2">
+    <g id="Layer_1-2" data-name="Layer 1">
+        <path class="y-logo-left" d="M251,332.58,386.28,0h-60L244.7,207q-9.24,25.39-19.62,53.48c-.88,2.36-1.73,4.65-2.59,7Z"/>
+        <path class="y-logo-right" d="M201.87,315.49h-.26c-3.33-7.76-6.69-15.66-10.07-23.61L63.87,0H0L174.67,374.74l-11.54,27.7q-13.84,34.63-38.47,57.33t-63.87,22.7a101.28,101.28,0,0,1-17.31-1.54,144.56,144.56,0,0,1-16.55-3.84l-13.08,50q21.54,7.68,49.25,7.7,31.53,0,56.56-10a147.5,147.5,0,0,0,44.24-27.31A169.79,169.79,0,0,0,197,456.31a370.05,370.05,0,0,0,24.62-51.56l9.3-22.87Z"/>
+        </g>
+    </g>
+</svg>
