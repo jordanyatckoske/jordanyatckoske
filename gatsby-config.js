@@ -7,9 +7,7 @@ module.exports = {
     description: `I am full stack developer looking for my next opportunity. Look at my work experience and contact me if you think there is a place for me at your organization. Thanks!`,
     author: `@JordanYatckoske`,
   },
-  proxy: {
-    url: "https://api.jordanyatckoske.com",
-  },
+  proxy: "https://api.jordanyatckoske.com",
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
