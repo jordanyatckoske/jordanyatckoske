@@ -66,13 +66,13 @@ class About extends React.Component {
       message: this.state.message,
     })
       .then(response => {
+        console.log(response)
         if (response.status === 200) {
-          // console.log(response.data)
-
           this.setState({
             name: "",
             email: "",
             message: "",
+            errors: "",
           })
         }
       })
