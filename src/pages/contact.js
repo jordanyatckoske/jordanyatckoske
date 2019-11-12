@@ -88,6 +88,7 @@ class About extends React.Component {
           // this.setState({ errors: error })
           console.log(error)
           console.log(error.response)
+          this.setState({ errors: error.response.data.errors })
         } else if (error.isAxiosError) {
           this.setState({
             errors: "Unable to process the request at this time.",
