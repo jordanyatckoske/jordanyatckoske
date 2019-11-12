@@ -90,6 +90,7 @@ class About extends React.Component {
           })
         } else if (error.response) {
           this.setState({ errors: error.response.errors })
+          console.log(error)
         } else {
           this.setState({
             errors: "Unable to process the request at this time.",
