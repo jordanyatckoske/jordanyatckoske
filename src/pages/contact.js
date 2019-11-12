@@ -84,13 +84,14 @@ class About extends React.Component {
         // } else if (error.request) {
         //   console.log(error.request)
         // }
-        if (error.isAxiosError) {
+        if (error.response) {
+          // this.setState({ errors: error })
+          console.log(error)
+          console.log(error.response)
+        } else if (error.isAxiosError) {
           this.setState({
             errors: "Unable to process the request at this time.",
           })
-        } else if (error.response) {
-          // this.setState({ errors: error })
-          // console.log(error)
         } else {
           this.setState({
             errors: "Unable to process the request at this time.",
