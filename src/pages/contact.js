@@ -7,8 +7,10 @@ import Styles from "./contact.module.scss"
 import SEO from "../components/seo"
 
 function ErrorContainer(props) {
-  const errors = null
-  if (props.errors.errors) {
+  let errors = null
+  if (typeof props.errors == "string") {
+    errors = <p>{props.errors}</p>
+  } else if (props.errors.errors) {
     errors = props.errors.errors.map(error => (
       <p key={error.param}>
         Invalid value "{error.value}" in {error.param} field.
@@ -27,20 +29,21 @@ class About extends React.Component {
       message: "",
       // emailConfirm: "",
       errors: "",
-      // errors: [
-      //   {
-      //     value: "example@example",
-      //     msg: "Invalid value",
-      //     param: "email",
-      //     location: "body",
-      //   },
-      //   {
-      //     value: "jrodan",
-      //     msg: "Invalid value",
-      //     param: "name",
-      //     location: "body",
-      //   },
-      // ],
+      // {
+      //   errors: [
+      //     {
+      //       value: "example@example",
+      //       msg: "Invalid value",
+      //       param: "email",
+      //       location: "body",
+      //     },
+      //     {
+      //       value: "jrodan",
+      //       msg: "Invalid value",
+      //       param: "name",
+      //       location: "body",
+      //     },
+      //   ],
       // },
     }
 
@@ -64,7 +67,7 @@ class About extends React.Component {
     })
       .then(response => {
         if (response.status === 200) {
-          console.log(response.data)
+          // console.log(response.data)
 
           this.setState({
             name: "",
@@ -75,19 +78,24 @@ class About extends React.Component {
       })
       .catch(error => {
         // this.setState({ errors: error })
-        // console.log("error: ", error)
-        if (error.response) {
-          // console.log(error.response.data)
-        } //else if (error.request) {
+        console.log("error: ", error)
+        // if (error.response) {
+        //   console.log(error.response.data)
+        // } else if (error.request) {
         //   console.log(error.request)
-        // } else {
-        //   console.log("Error", error.message)
         // }
+        if (error.isAxiosError) {
+          this.setState({
+            errors: "Unable to process the request at this time.",
+          })
+        } else if (error.response) {
+          this.setState({ errors: error.response.errors })
+        } else {
+          this.setState({
+            errors: "Unable to process the request at this time.",
+          })
+        }
       })
-    // } catch (e) {
-    //   console.log(e)
-    //   console.log(response)
-    // }
   }
 
   render() {
