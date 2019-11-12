@@ -77,8 +77,8 @@ class About extends React.Component {
         }
       })
       .catch(error => {
-        // this.setState({ errors: error })
-        console.log("error: ", error)
+        this.setState({ errors: error })
+        // console.log("error: ", error)
         // if (error.response) {
         //   console.log(error.response.data)
         // } else if (error.request) {
@@ -89,8 +89,8 @@ class About extends React.Component {
             errors: "Unable to process the request at this time.",
           })
         } else if (error.response) {
-          this.setState({ errors: error })
-          console.log(error)
+          // this.setState({ errors: error })
+          // console.log(error)
         } else {
           this.setState({
             errors: "Unable to process the request at this time.",
