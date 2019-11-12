@@ -8,10 +8,11 @@ import SEO from "../components/seo"
 
 function ErrorContainer(props) {
   let errors = null
-  if (typeof props.errors == "string") {
+  console.log(props)
+  if (typeof props.errors.errors == "string") {
     errors = <p>{props.errors}</p>
-  } else if (props.errors) {
-    errors = props.errors.map(error => (
+  } else if (props.errors.errors) {
+    errors = props.errors.errors.map(error => (
       <p key={error.param}>
         Invalid value "{error.value}" in {error.param} field.
       </p>
