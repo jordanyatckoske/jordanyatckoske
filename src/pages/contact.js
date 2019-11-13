@@ -48,7 +48,7 @@ class About extends React.Component {
       message = <p>{error}</p>
     } else if (errors.errors) {
       // console.log("reached the errors conditional")
-      message = errors.errors.map(error => (
+      message = errors.map(error => (
         <p key={error.param}>
           Invalid value "{error.value}" in {error.param} field.
         </p>
