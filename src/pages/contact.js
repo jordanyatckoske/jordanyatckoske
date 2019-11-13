@@ -15,23 +15,20 @@ class About extends React.Component {
       message: "",
       // emailConfirm: "",
       error: "",
-      errors: {},
-      // {
-      //   errors: [
-      //     {
-      //       value: "example@example",
-      //       msg: "Invalid value",
-      //       param: "email",
-      //       location: "body",
-      //     },
-      //     {
-      //       value: "jrodan",
-      //       msg: "Invalid value",
-      //       param: "name",
-      //       location: "body",
-      //     },
-      //   ],
-      // },
+      errors: [
+        {
+          value: "example@example",
+          msg: "Invalid value",
+          param: "email",
+          location: "body",
+        },
+        {
+          value: "jrodan",
+          msg: "Invalid value",
+          param: "name",
+          location: "body",
+        },
+      ],
     }
 
     this.handleChange = this.handleChange.bind(this)
@@ -46,7 +43,7 @@ class About extends React.Component {
     // console.log(props.errors)
     if (error) {
       message = <p>{error}</p>
-    } else if (errors.errors) {
+    } else if (errors) {
       // console.log("reached the errors conditional")
       message = errors.map(error => (
         <p key={error.param}>
@@ -115,7 +112,7 @@ class About extends React.Component {
   }
 
   render() {
-    const errorContainer = this.ErrorContainer()
+    // const errorContainer = this.ErrorContainer()
 
     return (
       <Layout>
@@ -186,8 +183,8 @@ class About extends React.Component {
             {/* {this.state.errors || this.state.error
               ? this.ErrorContainer(this.state.error, this.state.errors)
               : null} */}
-            {/* {this.ErrorContainer()} */}
-            {errorContainer}
+            {this.ErrorContainer()}
+            {/* {errorContainer} */}
           </div>
         </div>
       </Layout>
