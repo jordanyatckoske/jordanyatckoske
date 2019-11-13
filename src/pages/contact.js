@@ -6,22 +6,6 @@ import Layout from "../components/layout"
 import Styles from "./contact.module.scss"
 import SEO from "../components/seo"
 
-function ErrorContainer(props) {
-  let errors = null
-  // console.log(props.errors)
-  if (typeof props.errors.errors == "string") {
-    errors = <p>{props.errors}</p>
-  } else if (typeof props.errors == "object") {
-    errors = props.errors.errors.map(error => (
-      <p key={error.param}>
-        Invalid value "{error.value}" in {error.param} field.
-      </p>
-    ))
-  } else {
-  }
-
-  return <>{errors}</>
-}
 class About extends React.Component {
   constructor(props) {
     super(props)
@@ -30,7 +14,8 @@ class About extends React.Component {
       email: "",
       message: "",
       // emailConfirm: "",
-      errors: "",
+      error: "",
+      errors: {},
       // {
       //   errors: [
       //     {
@@ -51,6 +36,28 @@ class About extends React.Component {
 
     this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
+    this.ErrorContainer = this.ErrorContainer.bind(this)
+  }
+
+  ErrorContainer = () => {
+    let error = this.state.error
+    let errors = this.state.errors
+    let message = null
+    // console.log(props.errors)
+    if (error) {
+      message = <p>{error}</p>
+    } else if (errors.errors) {
+      // console.log("reached the errors conditional")
+      message = errors.errors.map(error => (
+        <p key={error.param}>
+          Invalid value "{error.value}" in {error.param} field.
+        </p>
+      ))
+    } else {
+      return null
+    }
+
+    return <>{message}</>
   }
 
   handleChange = type => event => this.setState({ [type]: event.target.value })
@@ -74,12 +81,13 @@ class About extends React.Component {
             name: "",
             email: "",
             message: "",
-            errors: "",
+            error: "",
+            errors: {},
           })
         }
       })
       .catch(error => {
-        this.setState({ errors: error })
+        // this.setState({ errors: error })
         // console.log("error: ", error)
         // if (error.response) {
         //   console.log(error.response.data)
@@ -91,13 +99,15 @@ class About extends React.Component {
           // console.log(error)
           // console.log(error.response)
           this.setState({ errors: error.response.data.errors })
-        } else if (error.isAxiosError) {
+        }
+        //  else if (error.isAxiosError) {
+        //   this.setState({
+        //     error: "Unable to process the request at this time.",
+        //   })
+        // }
+        else {
           this.setState({
-            errors: "Unable to process the request at this time.",
-          })
-        } else {
-          this.setState({
-            errors: "Unable to process the request at this time.",
+            error: "Unable to process the request at this time.",
           })
         }
       })
@@ -170,11 +180,10 @@ class About extends React.Component {
             </button>
           </form>
           <div className={Styles.errors}>
-            {this.state.errors ? (
-              <ErrorContainer errors={this.state.errors} />
-            ) : (
-              ""
-            )}
+            {/* {this.state.errors || this.state.error
+              ? this.ErrorContainer(this.state.error, this.state.errors)
+              : null} */}
+            {this.ErrorContainer()}
           </div>
         </div>
       </Layout>
