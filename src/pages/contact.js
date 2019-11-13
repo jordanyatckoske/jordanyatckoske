@@ -98,6 +98,7 @@ class About extends React.Component {
           // this.setState({ errors: error })
           // console.log(error)
           // console.log(error.response)
+          console.log(error.response.data.errors)
           this.setState({ errors: error.response.data.errors })
         }
         //  else if (error.isAxiosError) {
@@ -114,6 +115,8 @@ class About extends React.Component {
   }
 
   render() {
+    const errorContainer = this.ErrorContainer()
+
     return (
       <Layout>
         <SEO title="Contact" />
@@ -183,7 +186,8 @@ class About extends React.Component {
             {/* {this.state.errors || this.state.error
               ? this.ErrorContainer(this.state.error, this.state.errors)
               : null} */}
-            {this.ErrorContainer()}
+            {/* {this.ErrorContainer()} */}
+            {errorContainer}
           </div>
         </div>
       </Layout>
