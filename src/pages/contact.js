@@ -15,20 +15,20 @@ class About extends React.Component {
       message: "",
       // emailConfirm: "",
       error: "",
-      errors: [
-        {
-          value: "example@example",
-          msg: "Invalid value",
-          param: "email",
-          location: "body",
-        },
-        {
-          value: "jrodan",
-          msg: "Invalid value",
-          param: "name",
-          location: "body",
-        },
-      ],
+      errors: [],
+      //   {
+      //     value: "example@example",
+      //     msg: "Invalid value",
+      //     param: "email",
+      //     location: "body",
+      //   },
+      //   {
+      //     value: "jrodan",
+      //     msg: "Invalid value",
+      //     param: "name",
+      //     location: "body",
+      //   },
+      // ],
     }
 
     this.handleChange = this.handleChange.bind(this)
@@ -79,7 +79,7 @@ class About extends React.Component {
             email: "",
             message: "",
             error: "",
-            errors: {},
+            errors: [],
           })
         }
       })
