@@ -40,11 +40,9 @@ class About extends React.Component {
     let error = this.state.error
     let errors = this.state.errors
     let message = null
-    // console.log(props.errors)
     if (error) {
       message = <p>{error}</p>
     } else if (errors) {
-      // console.log("reached the errors conditional")
       message = errors.map(error => (
         <p key={error.param}>
           Invalid value "{error.value}" in {error.param} field.
@@ -72,7 +70,6 @@ class About extends React.Component {
       message: this.state.message,
     })
       .then(response => {
-        // console.log(response)
         if (response.status === 200) {
           this.setState({
             name: "",
@@ -84,26 +81,9 @@ class About extends React.Component {
         }
       })
       .catch(error => {
-        // this.setState({ errors: error })
-        // console.log("error: ", error)
-        // if (error.response) {
-        //   console.log(error.response.data)
-        // } else if (error.request) {
-        //   console.log(error.request)
-        // }
         if (error.response) {
-          // this.setState({ errors: error })
-          // console.log(error)
-          // console.log(error.response)
-          console.log(error.response.data.errors)
           this.setState({ errors: error.response.data.errors })
-        }
-        //  else if (error.isAxiosError) {
-        //   this.setState({
-        //     error: "Unable to process the request at this time.",
-        //   })
-        // }
-        else {
+        } else {
           this.setState({
             error: "Unable to process the request at this time.",
           })
@@ -112,8 +92,6 @@ class About extends React.Component {
   }
 
   render() {
-    // const errorContainer = this.ErrorContainer()
-
     return (
       <Layout>
         <SEO title="Contact" />
@@ -179,13 +157,7 @@ class About extends React.Component {
               Send Message
             </button>
           </form>
-          <div className={Styles.errors}>
-            {/* {this.state.errors || this.state.error
-              ? this.ErrorContainer(this.state.error, this.state.errors)
-              : null} */}
-            {this.ErrorContainer()}
-            {/* {errorContainer} */}
-          </div>
+          <div className={Styles.errors}>{this.ErrorContainer()}</div>
         </div>
       </Layout>
     )
