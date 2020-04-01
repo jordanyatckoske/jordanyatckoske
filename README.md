@@ -9,3 +9,5 @@
 </h1>
 
 This project is my personal website built using React (Gatsby). All content and desgin is created by me using Adobe Illustrator and styled using SCSS. 
+
+www.jordanyatckoske.com
