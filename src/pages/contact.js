@@ -1,5 +1,5 @@
 import React from "react"
-
+import API from "../utils/API"
 import YLogo from "../assets/YLogo.svg"
 import LinkedInIcon from "../assets/linkedin-brands.svg"
 import Layout from "../components/layout"
@@ -13,12 +13,83 @@ class About extends React.Component {
       name: "",
       email: "",
       message: "",
+      // emailConfirm: "",
+      error: "",
+      errors: [],
+      //   {
+      //     value: "example@example",
+      //     msg: "Invalid value",
+      //     param: "email",
+      //     location: "body",
+      //   },
+      //   {
+      //     value: "jrodan",
+      //     msg: "Invalid value",
+      //     param: "name",
+      //     location: "body",
+      //   },
+      // ],
     }
+
+    this.handleChange = this.handleChange.bind(this)
+    this.handleSubmit = this.handleSubmit.bind(this)
+    this.ErrorContainer = this.ErrorContainer.bind(this)
+  }
+
+  ErrorContainer = () => {
+    let error = this.state.error
+    let errors = this.state.errors
+    let message = null
+    if (error) {
+      message = <p>{error}</p>
+    } else if (errors) {
+      message = errors.map(error => (
+        <p key={error.param}>
+          Invalid value "{error.value}" in {error.param} field.
+        </p>
+      ))
+    } else {
+      return null
+    }
+
+    return <>{message}</>
   }
 
   handleChange = type => event => this.setState({ [type]: event.target.value })
 
-  handleSubmit = event => event.preventDefault()
+  handleSubmit = event => {
+    event.preventDefault()
+    // if (this.state.emailConfirm !== "") {
+    //   const errors = this.state.errors
+    //   this.setState({ errors: errors.push({}) })
+    //   return this.setState({ emailConfirm: "" })
+    // }
+    API.post("/contact", {
+      name: this.state.name,
+      email: this.state.email,
+      message: this.state.message,
+    })
+      .then(response => {
+        if (response.status === 200) {
+          this.setState({
+            name: "",
+            email: "",
+            message: "",
+            error: "",
+            errors: [],
+          })
+        }
+      })
+      .catch(error => {
+        if (error.response) {
+          this.setState({ errors: error.response.data.errors })
+        } else {
+          this.setState({
+            error: "Unable to process the request at this time.",
+          })
+        }
+      })
+  }
 
   render() {
     return (
@@ -32,7 +103,8 @@ class About extends React.Component {
           <h1>CONTACT ME</h1>
           <h3>
             Send me a message to learn about my experience or inquire about
-            possible development opportunities!
+            possible development opportunities! Contact me via LinkedIn or the
+            form below.
           </h3>
           <div className={Styles.logos}>
             <a
@@ -53,6 +125,7 @@ class About extends React.Component {
               onChange={this.handleChange("name")}
               placeholder="Name"
               autoComplete="off"
+              required
             />
             <input
               name="email"
@@ -61,6 +134,16 @@ class About extends React.Component {
               onChange={this.handleChange("email")}
               placeholder="Email"
               autoComplete="off"
+              required
+            />
+            <input
+              name="emailConfirm"
+              type="email"
+              value={this.state.emailConfirm}
+              onChange={this.handleChange("emailConfirm")}
+              className={Styles.displayNone}
+              tabindex="-1"
+              autoComplete="off"
             />
             <textarea
               name="message"
@@ -68,11 +151,13 @@ class About extends React.Component {
               onChange={this.handleChange("message")}
               placeholder="Message"
               autoComplete="off"
+              required
             />
             <button name="submit" type="submit">
               Send Message
             </button>
           </form>
+          <div className={Styles.errors}>{this.ErrorContainer()}</div>
         </div>
       </Layout>
     )

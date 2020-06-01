@@ -25,19 +25,19 @@ const About = () => (
       <p>
         Web development has given me a chance to express my passion for clean
         design and usable software. The variety within web development languages
-        has inspired me to become a continuous learner. A new langugage. A new
-        framework. A new best practice. All of these give me a chance to grow my
-        knowledge and learn how to build resilience when failure occurs.
+        has inspired me to become a continuous learner always working on a new
+        langugage, framework, or best practice. Becasue of this, my knowledge
+        and resilience have grown to best serve me when failure occurs.
       </p>
       <h3>What inpires me?</h3>
       <p>
-        Learning new things, creative and usable design, and ideas that contrast
-        with my own.
+        Simple: Learning new things, creative and usable design, and ideas that
+        contrast with my own.
       </p>
       <h3>What will I bring to your organization?</h3>
       <p>
-        A smile, a few jokes, an instilled love for learning, and a passion for
-        creating applications with thoughtful teams.
+        A smile, an instilled love for learning, and a passion for creating
+        applications with thoughtful teams.
       </p>
     </div>
   </Layout>

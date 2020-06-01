@@ -19,7 +19,7 @@
     }
   }
 
-  @include media("<tablet") {
+  @include media("<=tablet") {
     margin-top: 1.5em;
     svg {
       width: 30%;
@@ -86,6 +86,24 @@
     }
   }
 
+  .errors {
+    max-width: 80%;
+    margin: 1em auto;
+    p {
+      color: scale-color($color: $teal, $lightness: 20%);
+      -webkit-animation: slide-down 10s 0.5s backwards;
+      -moz-animation: slide-down 10s 0.5s backwards;
+      -o-animation: slide-down 10s 0.5s backwards;
+      animation: slide-down 10s 0.5s backwards;
+    }
+    @include media(">tablet", "<=desktop") {
+      max-width: 70%;
+    }
+
+    @include media(">=desktop") {
+      max-width: 50%;
+    }
+  }
   input,
   textarea {
     color: $teal;
@@ -115,7 +133,9 @@
       border: 1px solid $teal;
     }
   }
-
+  .display-none {
+    display: none;
+  }
   textarea {
     height: 5em;
   }

@@ -66,12 +66,12 @@
   }
   @include media(">tablet") {
     padding: 0 0 0 2em;
-    flex: 70%;
+    flex: 65%;
   }
   @include media(">=desktop") {
-    max-width: 650px;
+    max-width: 600px;
   }
   @include media("<desktop", ">tablet") {
-    max-width: 65%;
+    max-width: 50%;
   }
 }
