@@ -34,6 +34,10 @@
     content: "JORDAN YATCKOSKE";
   }
 
+  h4 {
+    color: scale-color($color: $magenta, $lightness: 20%);
+  }
+
   @include media(">tablet") {
     flex: 30%;
   }
